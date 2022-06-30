@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import Presentation from './Presentation'
+import Presentation from '../containers/Presentation'
 
 export default function Home() {
   return (
