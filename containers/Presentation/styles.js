@@ -4,6 +4,7 @@ import Image from "next/image";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
+    background: #878e88;
 `;
 
 export const MenuContainer = styled.div`

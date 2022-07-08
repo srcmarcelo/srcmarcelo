@@ -25,11 +25,11 @@ function Presentation() {
         <Menu background={scroll > 10 ? '#d2342b' : 'none'}>
           <NavBar>
             <NavList>
-              <NavItem>Conheça-me</NavItem>
-              <NavItem>Currículo</NavItem>
+              <NavItem>Sobre mim</NavItem>
+              <NavItem>Experiências</NavItem>
               <NavItem special>Portifólio</NavItem>
-              <NavItem>Hobbies</NavItem>
-              <NavItem>Contato</NavItem>
+              <NavItem>Currículo</NavItem>
+              <NavItem>Contatos</NavItem>
             </NavList>
           </NavBar>
         </Menu>
