@@ -8,7 +8,7 @@ export default function TitlesAnimation() {
     <TypeAnimation
       sequence={[
         'Criador do Caderneta Digital',
-        'Desenvolvedor web e mobile front-end',
+        'Desenvolvedor web e mobile',
       ].flatMap((title: string) => [title, 1000])}
       wrapper='span'
       speed={50}
