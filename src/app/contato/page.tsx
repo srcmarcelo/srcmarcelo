@@ -12,7 +12,7 @@ export default function Page() {
           <div className='text-center w-full md:w-1/2 flex flex-col justify-between items-center space-y-8 py-8 px-6 md:px-0'>
             <div>
               <h1 className='z-10 text-center text-4xl md:text-5xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-sans whitespace-nowrap bg-clip-text'>
-                Portifólio
+                Contato
               </h1>
             </div>
             <div className='bg-white bg-opacity-10 text-white rounded-lg p-4'>
