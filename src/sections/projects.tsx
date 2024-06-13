@@ -69,12 +69,14 @@ const Projects: React.FC = () => {
               image='/images/ela.png'
               title='SiGAE'
               link='https://youtu.be/3FClcuD1D_E'
-              description='Sistema de Gerenciamento e Acompanhamento Educacional para que escolas possam centralizar informações e fazer o acompanhamento dos alunos'
+              linkName='Assista o vídeo'
+              description='Plataforma feita para que escolas possam centralizar informações e fazer o acompanhamento dos alunos'
             />
             <ProjectCard
               image='/images/cadernetadg.png'
               title='Caderneta Digital'
               link='https://www.cadernetadg.com.br'
+              linkName='Acesse o site'
               description='Uma plataforma web e mobile que ajuda as pessoas a se organizarem financeiramente durante o mês'
             />
             <ProjectCard
