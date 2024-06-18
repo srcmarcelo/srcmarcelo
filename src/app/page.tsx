@@ -7,6 +7,7 @@ import Skills from '@/sections/skills';
 import Projects from '@/sections/projects';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import Contact from '@/sections/contact';
 
 export default function Home() {
   return (
@@ -21,11 +22,10 @@ export default function Home() {
 
         <main className='flex flex-col md:flex-row overflow-hidden justify-center py-16 items-center flex-1 w-full h-full'>
           <div className='flex w-full md:w-1/2 justify-center text-center mb-4'>
-            <div className='flex justify-center items-center'>
+            <div className='flex relative w-60 h-60 sm:w-96 sm:h-96 justify-center items-center'>
               <Image
+                fill
                 alt='profile pic'
-                width={400}
-                height={400}
                 src='/images/profile.jpg'
                 className='rounded-full'
               />
@@ -40,12 +40,12 @@ export default function Home() {
               <TitlesAnimation />
             </div>
             <div className='bg-white bg-opacity-10 text-white rounded-lg p-4'>
-              <p className='text-lg mb-2'>
+              <p className='text-base sm:text-lg mb-2'>
                 Programador com experiência em desenvolvimento de softwares de
                 ponta a ponta, focado em resolver grandes problemas com ótimas
                 soluções.
               </p>
-              <p className='text-lg'>
+              <p className='text-base sm:text-lg'>
                 Sempre busco ver o meu trabalho fazendo a diferença.
               </p>
             </div>
@@ -56,6 +56,7 @@ export default function Home() {
       <Experience />
       <Skills />
       <Projects />
+      <Contact />
 
       <Footer />
     </div>

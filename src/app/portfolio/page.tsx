@@ -1,6 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import AllProjects from '@/sections/all-projetcs';
+import Contact from '@/sections/contact';
 import React from 'react';
 
 export default function Page() {
@@ -23,12 +24,14 @@ export default function Page() {
               <p className='text-lg mb-2'>
                 Abaixo encontrará alguns dos meus principais projetos
               </p>
+              <p className='text-lg'>Clique no projeto para vizualizar</p>
             </div>
           </div>
         </main>
       </div>
 
       <AllProjects />
+      <Contact />
 
       <Footer />
     </div>
