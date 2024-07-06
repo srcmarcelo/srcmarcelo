@@ -20,7 +20,7 @@ interface ProjectCardProps {
 
 const projectsData = [
   {
-    image: '/images/ela.png',
+    image: '/images/sigae.png',
     gif: '/gifs/gae.gif',
     title: 'SiGAE',
     videoLink: 'https://youtu.be/3FClcuD1D_E',
@@ -140,7 +140,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {!selected && image ? (
             <Image fill src={image} alt={title} />
           ) : (
-            <Image fill src={gif} alt={title} />
+            <Image
+              fill
+              src={gif}
+              alt={title}
+              priority
+            />
           )}
         </div>
         <div className='p-2 flex flex-col h-full justify-between'>

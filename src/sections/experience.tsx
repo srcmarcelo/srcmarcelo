@@ -15,6 +15,11 @@ const experiences: ExperienceItemType[] = [
     company: 'Tracking Trade',
   },
   {
+    title: 'Desenvolvedor Freelancer',
+    date: '2021 - atualmente',
+    company: 'Autônomo',
+  },
+  {
     title: 'Desenvolvedor de software (Estágio)',
     date: '2021 - 2023',
     company: 'Tracking Trade',
