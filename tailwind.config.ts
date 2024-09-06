@@ -29,6 +29,7 @@ const config: Config = {
         'fade-right': 'fade-right 3s ease-in-out forwards',
         'octo-arm': 'wave 500ms ease-in-out infinite',
         'octo-arm-mobile': 'wave 560ms ease-in-out infinite',
+        'bounce-arrow': 'bounce-arrow 2s infinite',  // Added for the bouncing arrow
       },
       boxShadow: {
         card: '0 4px 6px rgba(0, 0, 0, 0.3)',
@@ -59,7 +60,6 @@ const config: Config = {
             transform: 'translateX(100%)',
             opacity: '0%',
           },
-
           '30%': {
             transform: 'translateX(0%)',
             opacity: '100%',
@@ -73,7 +73,6 @@ const config: Config = {
             transform: 'translateX(-100%)',
             opacity: '0%',
           },
-
           '30%': {
             transform: 'translateX(0%)',
             opacity: '100%',
@@ -99,6 +98,17 @@ const config: Config = {
           '100%': {
             'line-height': '100%',
             opacity: '100%',
+          },
+        },
+        'bounce-arrow': {
+          '0%, 20%, 50%, 80%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '40%': {
+            transform: 'translateY(-10px)',
+          },
+          '60%': {
+            transform: 'translateY(-5px)',
           },
         },
       },

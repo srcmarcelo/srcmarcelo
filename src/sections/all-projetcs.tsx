@@ -98,6 +98,18 @@ const projectsData = [
   },
 ];
 
+const imageLoader = ({
+  src,
+  width,
+  quality,
+}: {
+  src: string;
+  width: number;
+  quality?: number;
+}) => {
+  return `${src}?w=${width}&q=${quality || 75}`;
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   gif,
@@ -117,7 +129,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         !selected && setSelected?.();
       }}
       className={cn(
-        'bg-white w-full rounded-lg shadow-lg overflow-hidden flex flex-col p-2 transform transition duration-500 sm:flex-row',
+        'bg-white w-full rounded-lg shadow-lg overflow-hidden flex flex-col p-2 transform transition duration=500 sm:flex-row',
         selected
           ? 'col-span-1 py-4 sm:col-span-2 lg:col-span-3'
           : 'col-span-1 cursor-pointer hover:scale-105'
@@ -138,14 +150,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className='flex flex-1 flex-col items-center h-full'>
         <div className={'flex relative shrink-0 w-80 h-60'}>
           {!selected && image ? (
-            <Image fill src={image} alt={title} />
+            <Image loader={imageLoader} fill src={image} alt={title} />
           ) : (
-            <Image
-              fill
-              src={gif}
-              alt={title}
-              priority
-            />
+            <Image loader={imageLoader} fill src={gif} alt={title} priority />
           )}
         </div>
         <div className='p-2 flex flex-col h-full justify-between'>
@@ -194,7 +201,7 @@ const AllProjects: React.FC = () => {
   };
 
   return (
-    <div className='py-10 mb-16 w-full'>
+    <div id='all-projects' className='py-10 mb-16 w-full'>
       <div className='max-w-6xl mx-auto sm:px-6 lg:px-8'>
         <div className='flex flex-col w-full p-4 sm:flex-row'>
           <div

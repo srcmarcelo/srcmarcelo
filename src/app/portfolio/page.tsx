@@ -1,16 +1,35 @@
+'use client';
+
+import { BouncingArrow } from '@/components/bouncing-arrow';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import AllProjects from '@/sections/all-projetcs';
 import Contact from '@/sections/contact';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Page() {
+  const scrollToAllProjects = () => {
+    const allProjectsSection = document.getElementById('all-projects');
+    if (allProjectsSection) {
+      allProjectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Auto scroll after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      scrollToAllProjects();
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+
   return (
     <div>
       <div className='flex flex-col min-h-screen p-6'>
         <Header />
 
-        <main className='flex flex-col md:flex-row overflow-hidden justify-center py-16 items-center flex-1 w-full h-full'>
+        <main className='flex flex-col md:flex-row overflow-hidden justify-center py-16 items-center flex-1 w-full h-full relative'>
           <div className='text-center w-full md:w-1/2 flex flex-col justify-between items-center space-y-8 py-8 px-6 md:px-0'>
             <div>
               <h1 className='mb-2 z-10 text-center text-4xl md:text-5xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-sans whitespace-nowrap bg-clip-text'>
@@ -24,9 +43,11 @@ export default function Page() {
               <p className='text-lg mb-2'>
                 Abaixo encontrará alguns dos meus principais projetos
               </p>
-              <p className='text-lg'>Clique no projeto para vizualizar</p>
+              <p className='text-lg'>Clique no projeto para visualizar</p>
             </div>
           </div>
+
+          <BouncingArrow onScroll={scrollToAllProjects} />
         </main>
       </div>
 
